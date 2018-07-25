@@ -1,0 +1,24 @@
+# depslib dependency file v1.0
+1531651193 source:/home/kevo/Documents/c++ projects/class c++/arrowmember.cpp
+	<iostream>
+	"Tim.h"
+
+1531651193 /home/kevo/Documents/c++ projects/class c++/Tim.h
+
+1531648438 source:/home/kevo/Documents/c++ projects/class c++/main.cpp
+	<iostream>
+
+1531651225 source:/home/kevo/Documents/c++ projects/class c++/Tim.cpp
+	"Tim.h"
+	<iostream>
+
+1531650508 source:/home/kevo/Documents/c++ projects/class c++/Decon.cpp
+	"Decon.h"
+	<iostream>
+
+1531650343 /home/kevo/Documents/c++ projects/class c++/Decon.h
+
+1531650637 source:/home/kevo/Documents/c++ projects/class c++/deconstrurs.cpp
+	<iostream>
+	"Decon.h"
+
