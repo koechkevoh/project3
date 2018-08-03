@@ -1,5 +1,6 @@
 #include <iostream>
-#include <string>
+#include <cstdlib>
+#include <cstring>
 
 using namespace std;
 
@@ -14,11 +15,11 @@ using namespace std;
 
 
         private:
-             string name;
-             string faculty;
-             string course;
+             char name[50];
+             char faculty[50];
+             char course[50];
              char yearOfStudy[30];
-             string university;
+             char university[50];
              char eMailAddress[40];
              int telephoneContact;
              int balance;
@@ -29,7 +30,12 @@ using namespace std;
     };
     int num;
     void Bank::menu(){
-    cout << "\n choose your options from 1 to 6 "<<endl<<endl;
+    cout << "-----------------------------------------";
+    cout << "\n PLEASE SELECT AN OPTION FROM MENU BELOW"<<endl;
+    cout << "-----------------------------------------"<<endl;
+    cout << "\t\t----\n";
+    cout << "\t\tMENU"<<endl;
+    cout << "\t\t----"<<endl;
     cout << "\t1. Create a Saving Account"<<endl;
     cout << "\t2. Deposit Money to Your Account"<<endl;
     cout << "\t3. Withdraw Money From Your Account"<<endl;
@@ -59,21 +65,21 @@ using namespace std;
     }
  void Bank::get(){
      int go;
-     cout << "\tStudent Name:"<<endl;
-     getline(cin, name);
-     cout <<name;
-     cout << "\tFaculty:"<<endl;
+     cout << "\tStudent Name: ";
+     cin.getline(name,50);
+     cout << "\tFaculty: ";
      cin >>faculty;
-     cout << "\tCourse:"<<endl;
+     cout << "\tCourse: ";
      cin >>course;
-     cout << "\tYear Of Study:"<<endl;
+     cout << "\tYear Of Study: ";
      cin >>yearOfStudy;
-     cout << "\tUniversity:"<<endl;
+     cout << "\tUniversity: ";
      cin >>university;
-     cout << "\tTelephone Contact:"<<endl;
+     cout << "\tTelephone Contact: ";
      cin >>telephoneContact;
-     cout << "\tEmail-Address:"<<endl;
+     cout << "\tEmail-Address: ";
      cin >>eMailAddress;
+     cout<< "\t\n\nHIT ZERO TO GO TO MAIN MENU"<<endl;
      cout<<"\n";
      cin >>go;
 
@@ -84,10 +90,10 @@ using namespace std;
      }
 void Bank::deposit(){
     int go;
-    cout<< "\t\tEnter amount your want to Deposit to Your Account"<<endl;
+    cout<< "\tEnter amount your want to Deposit to Your Account"<<endl;
     cin>>depo;
     balance+=depo;
-    cout<< "\tHit Zero to go to Main Menu"<<endl;
+    cout<< "\t\nHIT ZERO TO GO TO MAIN MENU"<<endl;
     cout<< "\n";
     cin >>go;
 
@@ -98,9 +104,9 @@ void Bank::deposit(){
 }
 void Bank::check(){
     int go;
-    cout << "Your Account balance"<<endl;
+    cout << "\tYour Account Balance : Ksh ";
     cout << balance;
-    cout<< "\tHit Zero to go to Main Menu:"<<endl;
+    cout<< "\t\n\nHIT ZERO TO GO TO MAIN MENU"<<endl;
     cin >>go;
 
      if(go==0){
@@ -109,14 +115,17 @@ void Bank::check(){
      }else return;
 }
 void Bank::withdraw(){
+
     int go;
-    cout<< "Enter amount you want to withdraw:\n";
+    cout<< "\tEnter amount you want to withdraw: Ksh ";
     cin >>with;
-    cout<<"you have successfully withdrawn :Ksh"<<with;
+    cout<<"\tYou have successfully withdrawn : Ksh "<<with;
 	balance-=with;
-	cout<<"\nbalance is :Ksh\n"<<balance<<endl;
-	cout<< "\tHit Zero to go to Main Menu:"<<endl;
+	cout << "\n";
+	cout<<"\tBalance is : Ksh"<<balance<<endl<<endl;
+	cout<< "HIT ZERO TO GO TO MAIN MENU"<<endl;
     cin >>go;
+
 
      if(go==0){
 
@@ -129,22 +138,22 @@ void Bank::withdraw(){
 void Bank::BankInfo()
 {
 	int go;
-	cout<<"student's name:"<<name;
+	cout<<"\tstudent's name: "<<name;
 	cout<<"\n";
-	cout<<"faculty:"<<faculty;
+	cout<<"\tfaculty: "<<faculty;
 	cout<<"\n";
-	cout<<"course:"<<course;
+	cout<<"\tcourse: "<<course;
 	cout<<"\n";
-	cout<<"year of study:"<<yearOfStudy<<endl;
-	cout<<"university:"<<university;
+	cout<<"\tyear of study: "<<yearOfStudy<<endl;
+	cout<<"\tuniversity:"<<university;
 	cout<<"\n";
-	cout<<"telephone contact:"<<telephoneContact;
+	cout<<"\ttelephone contact:"<<telephoneContact;
 	cout<<"\n";
-	cout<<"email- address:"<<eMailAddress;
+	cout<<"\temail- address:"<<eMailAddress;
 	cout<<"\n";
 
 
-		cout<<"\t\nHit zero to go to main menu:";
+    cout<<"\t\nHIT ZERO TO GO TO MAIN MENU";
 
 	cout<<"\n";
 	cin>>go;
